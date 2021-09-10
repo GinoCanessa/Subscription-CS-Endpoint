@@ -46,6 +46,8 @@ namespace subscription_cs_endpoint
 
             // app.UseHttpsRedirection();
 
+            Task.Run(app.BuildTunnel);
+
             app.UseRouting();
 
             app.UseAuthorization();

@@ -45,7 +45,9 @@ namespace subscription_cs_endpoint
 
           fhirCsR4.Models.SubscriptionStatus status = (fhirCsR4.Models.SubscriptionStatus)bundle.Entry[0].Resource;
 
-          System.Console.WriteLine($" <<< received notification type: {status.Type}");
+          System.Console.WriteLine($" <<<   received notification type: {status.Type}");
+          System.Console.WriteLine($"     eventsSinceSubscriptionStart: {status.EventsSinceSubscriptionStart}");
+          System.Console.WriteLine($"             eventsInNotification: {status.EventsInNotification}");
         }
         catch (Exception ex)
         {
